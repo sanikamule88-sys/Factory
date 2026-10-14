@@ -11,11 +11,15 @@ import bank.com.Service.ShowingDetails;
 @RestController
 public class EmployeeData
 {
+	
+
 	@GetMapping("print/{type}")
  public String Employee( @PathVariable String type) 
  {
 		DetailsofEmployee s= Factory.createObject(type);
-	       s.EmployeeName();
+
+	       s.EmployeeName(); 
+	       
 	       s.EmployeeAge();
 	       s.EmployeeAddress();
 	       s.EmployeeGender();
